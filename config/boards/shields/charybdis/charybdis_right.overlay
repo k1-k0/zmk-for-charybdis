@@ -5,6 +5,7 @@
  */
  
 #include "charybdis.dtsi"
+#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -57,7 +58,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        automouse-layer = <3>;
+        // automouse-layer = <3>;
         scroll-layers = <4>;
         snipe-layers = <5>;
     };
@@ -66,8 +67,17 @@
 
 
 / {
+    zip_temp_layer_mouse: zip_temp_layer_mouse {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+
+        require-prior-idle-ms = <400>;
+    };
+
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        
+        input-processors = <&zip_temp_layer_mouse 3 250>;
     };
 };
