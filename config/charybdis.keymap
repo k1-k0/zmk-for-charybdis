@@ -3,6 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define QT_MS 180
 #define HMR_RPI_MS 175
@@ -129,10 +130,10 @@
 
         fun {
             bindings = <
-&kp F12  &kp F1    &kp F2    &kp F3     &kp F4     &kp F5    &kp F6           &kp F7                &kp F8                &kp F9           &kp F10         &kp F11
-&trans   &trans    &trans    &trans     &trans     &trans    &kp PAUSE_BREAK  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans           &trans          &trans
-&trans   &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &trans    &kp C_PREV       &mt RSHFT C_VOL_DN    &mt RCTRL C_VOL_UP    &mt RALT C_NEXT  &mt RGUI PSCRN  &trans
-&trans   &trans    &trans    &trans     &trans     &trans    &kp DEL          &kp C_STOP            &kp C_MUTE            &kp C_PP         &trans          &trans
+&kp F12  &kp F1    &kp F2    &kp F3     &kp F4     &kp F5    &kp F6           &kp F7                &kp F8                &kp F9             &kp F10           &kp F11
+&trans   &trans    &trans    &trans     &trans     &trans    &kp PAUSE_BREAK  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans             &trans            &trans
+&trans   &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &trans    &kp C_PREV       &rpht RSHFT C_VOL_DN  &rpht RCTRL C_VOL_UP  &rpht RALT C_NEXT  &rpht RGUI PSCRN  &trans
+&trans   &trans    &trans    &trans     &trans     &trans    &kp DEL          &kp C_STOP            &kp C_MUTE            &kp C_PP           &trans            &trans
                              &trans     &trans     &trans    &trans           &trans
                                         &trans     &trans    &trans
             >;
@@ -141,8 +142,8 @@
         mou {
             bindings = <
 &bootloader  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none      &bt BT_CLR    &bt BT_CLR  &none      &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bootloader
-&trans       &trans        &trans        &trans        &trans     &trans        &trans      &trans     &trans        &trans        &trans        &trans
-&trans       &trans        &mkp RCLK     &mkp MCLK     &mkp LCLK  &trans        &trans      &mkp LCLK  &mkp MCLK     &mkp RCLK     &trans        &trans
+&out OUT_BLE &trans        &trans        &trans        &trans     &trans        &trans      &trans     &trans        &trans        &trans        &out OUT_BLE
+&out OUT_USB &trans        &mkp RCLK     &mkp MCLK     &mkp LCLK  &trans        &trans      &mkp LCLK  &mkp MCLK     &mkp RCLK     &trans        &out OUT_USB
 &trans       &trans        &mo 5         &mo 4         &trans     &trans        &trans      &trans     &mo 4         &mo 5         &trans        &trans
                                          &trans        &mkp LCLK  &mkp RCLK     &mkp RCLK   &mkp LCLK
                                                        &trans     &mkp MCLK     &mkp MCLK
@@ -152,8 +153,8 @@
         scroll {
             bindings = <
 &bootloader  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none      &bt BT_CLR    &bt BT_CLR  &none      &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bootloader
-&trans       &trans        &trans        &trans        &trans     &trans        &trans      &trans     &trans        &trans        &trans        &trans
-&trans       &trans        &mkp RCLK     &mkp MCLK     &mkp LCLK  &trans        &trans      &mkp LCLK  &mkp MCLK     &mkp RCLK     &trans        &trans
+&out OUT_BLE &trans        &trans        &trans        &trans     &trans        &trans      &trans     &trans        &trans        &trans        &out OUT_BLE
+&out OUT_USB &trans        &mkp RCLK     &mkp MCLK     &mkp LCLK  &trans        &trans      &mkp LCLK  &mkp MCLK     &mkp RCLK     &trans        &out OUT_USB
 &trans       &trans        &mo 5         &mo 4         &trans     &trans        &trans      &trans     &mo 4         &mo 5         &trans        &trans
                                          &trans        &mkp LCLK  &mkp RCLK     &mkp RCLK   &mkp LCLK
                                                        &trans     &mkp MCLK     &mkp MCLK
@@ -163,8 +164,8 @@
         snipe {
             bindings = <
 &bootloader  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none      &bt BT_CLR    &bt BT_CLR  &none      &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bootloader
-&trans       &trans        &trans        &trans        &trans     &trans        &trans      &trans     &trans        &trans        &trans        &trans
-&trans       &trans        &mkp RCLK     &mkp MCLK     &mkp LCLK  &trans        &trans      &mkp LCLK  &mkp MCLK     &mkp RCLK     &trans        &trans
+&out OUT_BLE &trans        &trans        &trans        &trans     &trans        &trans      &trans     &trans        &trans        &trans        &out OUT_BLE
+&out OUT_USB &trans        &mkp RCLK     &mkp MCLK     &mkp LCLK  &trans        &trans      &mkp LCLK  &mkp MCLK     &mkp RCLK     &trans        &out OUT_USB
 &trans       &trans        &trans        &mo 4         &trans     &trans        &trans      &trans     &mo 4         &trans        &trans        &trans
                                          &trans        &mkp LCLK  &mkp RCLK     &mkp RCLK   &mkp LCLK
                                                        &trans     &mkp MCLK     &mkp MCLK
