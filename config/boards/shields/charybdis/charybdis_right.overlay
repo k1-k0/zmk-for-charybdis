@@ -5,7 +5,6 @@
  */
  
 #include "charybdis.dtsi"
-#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -60,7 +59,7 @@
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         scroll-layers = <4>;
         snipe-layers = <3>;
-      // automouse-layer = <3>;
+        automouse-layer = <3>;
     };
 };
 
@@ -70,6 +69,5 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        input-processors = <&zip_temp_layer 5 800>;
     };
 };
