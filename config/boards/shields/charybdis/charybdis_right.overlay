@@ -71,6 +71,7 @@
         compatible = "zmk,input-processor-temp-layer";
         #input-processor-cells = <2>;
 
+        excluded-positions = <49 50 51 52 53 54 55>;   
         require-prior-idle-ms = <300>;
     };
 
@@ -78,7 +79,6 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
         
-        excluded-positions = <49 50 51 52 53 54 55>;   
         input-processors = <&zip_temp_layer_mouse 3 1000>;
     };
 };
