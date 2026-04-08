@@ -112,7 +112,7 @@
 &kp GRAVE    &lpht LCMD A  &lpht LALT S  &lpht LCTRL D  &lpht LSHFT F  &kp G                 &kp H             &rpht RSHFT J  &rpht RCTRL K  &rpht RALT L  &rpht RGUI SEMI  &kp APOS
 &lt 3 MINUS  &kp Z         &kp X         &kp C          &kp V          &kp B                 &kp N             &kp M          &kp COMMA      &kp DOT       &kp SLASH        &lt 3 EQUAL
                                          &kp TAB        &lt 1 SPACE    &lpht LHYPER ENTER    &rpht RHYPER ESC  &lt 2 BSPC
-                                                        &kp CAPS       MSHFT                 MSHFT
+                                                        &kp F18        MSHFT                 MSHFT
             >;
         };
 
