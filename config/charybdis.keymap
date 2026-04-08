@@ -119,8 +119,8 @@
         nav {
             bindings = <
 &kp F12  &kp F1       &kp F2    &kp F3         &kp F4      &kp F5        &kp F6     &kp F7            &kp F8            &kp F9            &kp F10         &kp F11
-&trans   &sk LHYPER   &kp ESC   &kp LS(TAB)    &app_swap   &kp CAPS      &kp ESC    &kp PG_UP         &kp UP            &kp PG_DN         &sk RHYPER      &trans
-&trans   &sk LGUI     &sk LALT  &sk LCTRL      &sk LSHFT   &caps_word    &kp HOME   &rpht RSHFT LEFT  &rpht RCTRL DOWN  &rpht RALT RIGHT  &rpht RGUI END  &trans
+&trans   &sk LHYPER   &kp ESC   &kp LS(TAB)    &app_swap   &kp CAPS      &kp HOME   &kp PG_DN         &kp PG_UP         &kp END           &sk RHYPER      &trans
+&trans   &sk LGUI     &sk LALT  &sk LCTRL      &sk LSHFT   &caps_word    &kp LEFT   &rpht RSHFT DOWN  &rpht RCTRL UP    &rpht RALT RIGHT  &rpht RGUI ESC  &trans
 &trans   &kp LS(TAB)  &tbbr     &kp LS(GRAVE)  &appw_swap  &kp ENTER     &kp ENTER  &kp BSPC          &kp TAB           &kp DEL           &kp K_APP       &trans
                                 &trans         &trans      &trans        &trans     &trans
                                                &trans      &trans        &trans
@@ -129,11 +129,11 @@
 
         fun {
             bindings = <
-&kp F12  &kp F1    &kp F2    &kp F3     &kp F4     &kp F5    &kp F6           &kp F7              &kp F8                &kp F9             &kp F10           &kp F11
-&trans   &trans    &trans    &trans     &trans     &trans    &kp PAUSE_BREAK  &kp C_BRI_INC       &kp C_VOL_UP          &kp C_BRI_DEC      &kp INSERT        &trans
-&trans   &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &trans    &kp C_RW         &rpht RSHFT C_PREV  &rpht RCTRL C_VOL_DN  &rpht RALT C_NEXT  &rpht RGUI C_FF   &trans
-&trans   &trans    &trans    &trans     &trans     &trans    &kp DEL          &kp C_STOP          &kp C_MUTE            &kp C_PP           &kp PSCRN         &trans
-                             &trans     &trans     &trans    &trans           &trans
+&kp F12  &kp F1    &kp F2    &kp F3     &kp F4     &kp F5    &kp F6       &kp F7               &kp F8                &kp F9             &kp F10            &kp F11
+&trans   &trans    &trans    &trans     &trans     &trans    &kp C_RW     &kp C_BRI_DEC        &kp C_BRI_INC         &kp C_FF           &kp INSERT         &trans
+&trans   &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &trans    &kp C_PREV   &rpht RSHFT C_VOL_DN &rpht RCTRL C_VOL_UP  &rpht RALT C_NEXT  &rpht RGUI PSCRN   &trans
+&trans   &trans    &trans    &trans     &trans     &trans    &kp DEL      &kp C_STOP           &kp C_MUTE            &kp C_PP           &kp PAUSE_BREAK    &trans
+                             &trans     &trans     &trans    &trans       &trans
                                         &trans     &trans    &trans
             >;
         };
